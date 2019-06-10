@@ -7,6 +7,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  reorderItems = [];
+  reorderMode = false;
+  
+  constructor() {
+    // just make 25 dumb items
+    for (let i = 0; i < 25; i++) {
+      this.reorderItems.push({
+        id: i,
+        value: `Something${i}`
+      });
+    }
+  }
 
 }
